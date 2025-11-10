@@ -1,0 +1,22 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "prject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LetMahomed/cse341.git"
+  },
+  "author": "Leticia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LetMahomed/cse341/issues"
+  },
+  "homepage": "https://github.com/LetMahomed/cse341#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
