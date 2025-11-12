@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/LetMahomed/cse341#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^17.2.3",
+    "env": "^0.0.2",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0"
   }
 }
