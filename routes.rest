@@ -4,19 +4,29 @@
 GET http://localhost:3000/users
 
 ### Get contact by ID  
-Get http://localhost:3000/users/6911547504beaccb7f6f985d
+GET http://localhost:3000/users/6911547504beaccb7f6f985d
 
 ### Create contact
-POST http://localhost:3000/users  HTTP/1.1
-content-type: application/json
+POST http://localhost:3000/users
+Content-Type: application/json
 
 {
-    "firstname": "Ashley",
-    "lastname": "Weaver",   
-    "email": "aWeaver@test.com",
-    "favoriteColor": "brown",
-    "birthday": "06/19/2000"
+    "email": "test@example.com",
+    "username": "test1@test.com",   
+    "name": "Hello1",
+    "ipaddress": "94.121.163.63"
 }
 
-### PUT ontact
-PUT http://localhost:3000/users/6911547504beaccb7f6f985d  HTTP/1.1
+### PUT contact
+PUT http://localhost:3000/users/6911547504beaccb7f6f985d
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "username": "test1@test.com",   
+    "name": "Hello1",
+    "ipaddress": "94.121.163.63"
+}
+
+### DELETE contact
+DELETE http://localhost:3000/users/6911547504beaccb7f6f985d
