@@ -1,0 +1,22 @@
+// LOCALHOST
+
+### Get all users 
+GET http://localhost:3000/users
+
+### Get contact by ID  
+Get http://localhost:3000/users/6911547504beaccb7f6f985d
+
+### Create contact
+POST http://localhost:3000/users  HTTP/1.1
+content-type: application/json
+
+{
+    "firstname": "Ashley",
+    "lastname": "Weaver",   
+    "email": "aWeaver@test.com",
+    "favoriteColor": "brown",
+    "birthday": "06/19/2000"
+}
+
+### PUT ontact
+PUT http://localhost:3000/users/6911547504beaccb7f6f985d  HTTP/1.1
