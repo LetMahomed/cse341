@@ -1,11 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
+const contactsRoutes = require('./routes/contacts'); 
 const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json()); 
+// Middleware
+app.use(bodyParser.json());
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader(
@@ -16,13 +19,17 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use('/', require('./routes'));
+// Routes
+app.use('/contacts', contactsRoutes); 
+app.use('/', require('./routes')); 
 
+// Initialize MongoDB and start server
 mongodb.initDb((err) => {
     if (err) {
-        console.log(err);
-    }
-    else {
-        app.listen(port, () => {console.log(`Database listening and node Server is running on port ${port}`);});
+        console.log('Failed to connect to database:', err);
+    } else {
+        app.listen(port, () => {
+            console.log(`Database connected and Node server running on port ${port}`);
+        });
     }
 });
