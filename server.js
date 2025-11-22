@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
-const contactsRoutes = require('./routes/contacts'); 
+const contactsRoutes = require('./routes/users'); 
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use('/contacts', contactsRoutes); 
+app.use('/users', contactsRoutes); 
 app.use('/', require('./routes')); 
 
 // Initialize MongoDB and start server
